@@ -1,0 +1,3 @@
+SELECT r.ANO_ELEICAO, e.DS_FAIXA_ETARIA, COUNT(e.DS_FAIXA_ETARIA) FROM eleitorado.public.eleitorado e
+INNER JOIN eleitorado.public.resultado r ON r.ANO_ELEICAO = e.ANO_ELEICAO
+GROUP BY e.DS_FAIXA_ETARIA, r.ANO_ELEICAO

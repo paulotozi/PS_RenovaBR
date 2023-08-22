@@ -1,0 +1,3 @@
+SELECT r.ANO_ELEICAO, e.DS_ESTADO_CIVIL, COUNT(e.DS_ESTADO_CIVIL) FROM eleitorado.public.eleitorado e
+INNER JOIN eleitorado.public.resultado r ON r.ANO_ELEICAO = e.ANO_ELEICAO
+GROUP BY e.DS_ESTADO_CIVIL, r.ANO_ELEICAO
