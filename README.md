@@ -12,14 +12,6 @@ Para utilizarmos os arquivos .csv em PostgreSQL, temos que criar as Tables no am
 
 Para copiar o conteúdo de ambos arquivos .csv, utilizamos a query COPY para ambas as Databases, nota-se que a Database RESULTADO teve de ser tratada a parte pois na linha 1646722 o NM_VOTAVEL estava como "SOLANGE "EM DEFESA DOS ANIMAIS", contendo uma aspas dupla a mais, o que causa erro na execução da query. O código em Python foi usado no Colaboratory para pular as linhas com defeitos de escrita.
 
-## Colunas não-utilizadas
-
-As seguintes linhas não serão utilizadas para análise, pois não contêm informação útil à análise:
-
-Eleitorado: DT_GERACAO, HH_GERACAO, CD_MUN_SIT_BIOMETRIA, DS_MUN_SIT_BIOMETRIA, QT_ELEITORES_APTOS.
-
-Resultado: DT_GERACAO, HH_GERACAO, CD_TIPO_ELEICAO, DS_TIPO_ELEICAO, CD_PLEITO, DT_PLEITO, NR_TURNO, CD_ELEICAO, DS_ELEICAO, SG_UF
-
 ## Colunas utilizadas
 
 As seguintes colunas serão utilizadas para análise, pois contêm informações pertinentes a análise:
@@ -27,6 +19,11 @@ As seguintes colunas serão utilizadas para análise, pois contêm informações
 Eleitorado: DS_GENERO, DS_ESTADO_CIVIL, DS_FAIXA_ETARIA, DS_GRAU_ESCOLARIDADE.
 
 Resultado: NM_VOTAVEL, NM_MUNICIPIO, DS_CARGO_PERGUNTA.
+
+## Colunas não-utilizadas
+
+Todas as outras colunas contêm informação que não é pertinente a esta análise, portanto qualquer coluna que não está na seção anterior não será utilizada
+
 
 ## Queries
 
